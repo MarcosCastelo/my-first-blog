@@ -1,0 +1,23 @@
+body {
+    background-color:#e2eaea
+}
+
+#titulo {
+    background-color:#3d7979;
+    text-align:center;
+    color:#fff;
+    padding:1px;
+    margin-bottom:20px;
+    width:100%;
+}
+
+.conteudo{
+    width:75%;
+}
+
+fieldset {
+    border-radius:15px;
+    margin:15px;
+    border-color:#fff;
+    text-align:justify
+}

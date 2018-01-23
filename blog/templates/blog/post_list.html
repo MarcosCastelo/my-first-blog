@@ -1,19 +1,23 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <title>Blogui</title>
 </head>
 <body>
-<div>
-    <h1><a href="/">Django Girls Blog</a></h1>
+<div id="titulo">
+    <h1>Django Working Blog</h1>
 </div>
 
 {% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+    <div class="conteudo">
+        <fieldset>
+            <legend><h2><b>{{ post.title }}</b></h2></legend>
+            <p>published: {{ post.created_date }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </fieldset>
     </div>
 {% endfor %}
 </body>
